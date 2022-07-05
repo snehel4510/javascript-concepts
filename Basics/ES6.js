@@ -149,3 +149,37 @@ export default function add(x, y) {
   return x + y;
 }
 import add from "./math_functions.js"; // no curly braces
+
+// javascript template literals/strings
+
+// uses backticks so we can use both single and double quotes inside a string
+let text1 = `He's often called "Johnny"`;
+console.log(text1);
+
+//Template literals allows multiline strings -> it's multiline both in the code & output console
+let text2 = `The quick
+brown fox
+jumps over
+the lazy dog`;
+console.log(text2);
+
+// string interpolation -> allows us to insert variables inside a string
+let firstName = "John";
+let lastName = "Doe";
+let text3 = `Welcome ${firstName}, ${lastName}!`;
+console.log(text3);
+
+//Template literals allow expressions in strings:
+let price = 10;
+let VAT = 0.25;
+let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;
+console.log(total);
+
+// HTML templates
+let header = "Templates Literals";
+let tags = ["template literals", "javascript", "es6"];
+let html = `<h2>${header}</h2><ul>`;
+for (const x of tags) {
+  html += `<li>${x}</li>`;
+}
+html += `</ul>`;
