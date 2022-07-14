@@ -37,3 +37,23 @@ let s7 = "HellO world";
 let s8 = s7.replace("hello", "hi"); // won't work
 let s9 = s7.replace(/hello/i, "hi");
 console.log(s8, s9);
+
+
+// lower & upper case
+let str = 'HellO'
+console.log(str.toLowerCase()); // will convert to lower case
+console.log(str.toUpperCase()); // will convert to upper case
+
+// string to integer
+var a = "100";
+var b = parseInt(a);
+var d = parseInt("3 11 43");
+console.log(b,d);
+
+// integer to string
+var c = 100;
+var e = c.toString();
+console.log(e);
+
+console.log(String.fromCharCode(65)); // will return the character for the given ASCII code
+console.log("A".charCodeAt(0)); // will return the ASCII code for the given character
