@@ -1,8 +1,20 @@
 const http = require('http');
 const fs = require('fs');
+const _ = require('lodash');
 
 const server = http.createServer((req, res) => {
     console.log(req.url, req.method); 
+
+    // lodash
+    const num = _.random(1, 20); // a random number between 1 and 20
+    console.log(num);
+
+    // run a function only once after the request is made
+    const greet = _.once(() => {
+        console.log('hello');
+    });
+    greet();
+    greet();
 
     // Basic routing
     let path = './views';
